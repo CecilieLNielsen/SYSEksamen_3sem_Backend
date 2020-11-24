@@ -1,6 +1,6 @@
 package utils;
 
-import entities.Destenation;
+import entities.Airport;
 import entities.Flight;
 import entities.Role;
 import entities.User;
@@ -18,8 +18,8 @@ public class SetupTestUsers {
         User user = new User("user", "123");
         User admin = new User("admin", "123123");
         User both = new User("user_admin", "123123123");
-        Destenation des = new Destenation("Madrid");
-        Flight f1 = new Flight("SAS", des);
+        //Airport des = new Airport("Madrid");
+        //Flight f1 = new Flight("SAS", des);
 
         if (admin.getUserPass().equals("test") || user.getUserPass().equals("test") || both.getUserPass().equals("test")) {
             throw new UnsupportedOperationException("You have not changed the passwords");
@@ -33,8 +33,8 @@ public class SetupTestUsers {
         both.addRole(userRole);
         both.addRole(adminRole);
         em.persist(userRole);
-        em.persist(des);
-        em.persist(f1);
+        //em.persist(des);
+        //em.persist(f1);
         em.persist(adminRole);
         em.persist(user);
         em.persist(admin);

@@ -23,9 +23,21 @@ public class Flight implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long fligth_id;
     private String airline;
-    private Destenation des;
+    private Airport des;
+    private Airport arival;
+    private int price;
+
+    public Flight(String airline, Airport des, Airport arival, int price) {
+        this.airline = airline;
+        this.des = des;
+        this.arival = arival;
+        this.price = price;
+    }
     
     
+
+    public Flight() {
+    }
 
     public Long getId() {
         return fligth_id;
@@ -33,14 +45,6 @@ public class Flight implements Serializable {
 
     public void setId(Long fligth_id) {
         this.fligth_id = fligth_id;
-    }
-
-    public Flight(String airline, Destenation des) {
-        this.airline = airline;
-        this.des = des;
-    }
-
-    public Flight() {
     }
 
     
@@ -60,14 +64,31 @@ public class Flight implements Serializable {
         this.airline = airline;
     }
 
-    public Destenation getDes() {
+    public Airport getDes() {
         return des;
     }
 
-    public void setDes(Destenation des) {
+    public void setDes(Airport des) {
         this.des = des;
     }
 
+    public Airport getArival() {
+        return arival;
+    }
+
+    public void setArival(Airport arival) {
+        this.arival = arival;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    
     
     
 }

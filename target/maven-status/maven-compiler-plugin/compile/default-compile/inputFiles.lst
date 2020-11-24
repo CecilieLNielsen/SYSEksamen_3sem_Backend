@@ -1,7 +1,7 @@
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/EMF_Creator.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/AuthenticationExceptionMapper.java
-/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Destenation.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/ApplicationConfig.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Airport.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/errorhandling/ExceptionDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/DadDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/cors/CorsFilter.java
@@ -17,6 +17,7 @@
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/RenameMe.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Role.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Flight.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Country.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/errorhandling/GenericExceptionMapper.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/AuthenticationException.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/JWTSecurityContext.java

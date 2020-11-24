@@ -1,3 +1,4 @@
+entities/Country.class
 errorhandling/GenericExceptionMapper.class
 utils/EMF_Creator.class
 security/SharedSecret.class
@@ -13,7 +14,6 @@ rest/ApplicationConfig.class
 security/JWTAuthenticationFilter.class
 security/RolesAllowedFilter.class
 errorhandling/ExceptionDTO.class
-entities/Destenation.class
 DTO/demo/ChuckDTO.class
 entities/RenameMe.class
 utils/SetupTestUsers.class
@@ -28,6 +28,7 @@ security/JWTSecurityContext.class
 facades/UserFacade.class
 utils/HttpUtils.class
 DTO/demo/DadDTO.class
+entities/Airport.class
 errorhandling/NotFoundException.class
 entities/User.class
 rest/FlightResource.class

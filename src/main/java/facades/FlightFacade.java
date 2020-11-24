@@ -5,6 +5,7 @@
  */
 package facades;
 
+import DTO.demo.FlightDTO;
 import entities.Flight;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,18 +39,26 @@ public class FlightFacade {
         return instance;
     }
 
-    public List<Flight> getAllFligth() {
+    //returns all flights in local database. 
+    public List<FlightDTO> getAllFligth() {
         EntityManager em = emf.createEntityManager();
         
         try {
             TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight F", Flight.class);
             List<Flight> flights = new ArrayList();
             flights = query.getResultList();
+            List<FlightDTO> allFlights = new ArrayList();
+            for (Flight f : query.getResultList()) {
+                allFlights.add(new FlightDTO(f));
+            }
             System.out.println("Size Flight " + flights.size());
-            return flights;
+            return allFlights;
         } finally {
             em.close();
         }
     }
+    
+    
+   
 
 }

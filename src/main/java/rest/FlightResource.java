@@ -45,6 +45,8 @@ public class FlightResource {
      * Retrieves representation of an instance of rest.FlightResource
      * @return an instance of java.lang.String
      */
+    
+    //returns all flights in database. 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
