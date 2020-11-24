@@ -3,11 +3,13 @@
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/ApplicationConfig.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Airport.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/errorhandling/ExceptionDTO.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/AirportDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/DadDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/cors/CorsFilter.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/AwesomeDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/SetupTestUsers.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/DemoResource.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/FlightDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/RenameMeResource.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/RolesAllowedFilter.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/HttpUtils.java
@@ -25,6 +27,7 @@
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/facades/FacadeExample.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/CombinedDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/SharedSecret.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/CountryDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/NotAuthorizedExceptionMapper.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/demo/PlanetDTO.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/facades/UserFacade.java

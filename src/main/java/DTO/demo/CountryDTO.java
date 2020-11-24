@@ -5,10 +5,24 @@
  */
 package DTO.demo;
 
+import entities.Country;
+import java.util.List;
+
 /**
  *
  * @author rh
  */
 public class CountryDTO {
+
+    private String countryName;
+    private List<String> airports;
+
+    public CountryDTO(Country country) {
+        this.countryName = country.getCountryName();
+        //this.airports = country.getAirports();  //skal laves om i airports så vi har en metode der giver hver elements navn. 
+    }
     
+    
+    
+
 }

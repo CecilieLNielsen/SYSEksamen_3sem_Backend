@@ -10,10 +10,12 @@ DTO/demo/AwesomeDTO.class
 entities/Role.class
 DTO/demo/PlanetDTO.class
 rest/RenameMeResource.class
+DTO/demo/AirportDTO.class
 rest/ApplicationConfig.class
 security/JWTAuthenticationFilter.class
 security/RolesAllowedFilter.class
 errorhandling/ExceptionDTO.class
+DTO/demo/FlightDTO.class
 DTO/demo/ChuckDTO.class
 entities/RenameMe.class
 utils/SetupTestUsers.class
@@ -33,3 +35,4 @@ errorhandling/NotFoundException.class
 entities/User.class
 rest/FlightResource.class
 DTO/demo/CombinedDTO.class
+DTO/demo/CountryDTO.class
