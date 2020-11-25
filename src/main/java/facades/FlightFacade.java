@@ -5,7 +5,7 @@
  */
 package facades;
 
-import DTO.demo.FlightDTO;
+import DTO.FlightDTO;
 import entities.Flight;
 import java.util.ArrayList;
 import java.util.List;

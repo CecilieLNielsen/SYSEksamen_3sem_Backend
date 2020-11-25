@@ -6,6 +6,7 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,34 +24,21 @@ public class Airport implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @ManyToOne
-    private Country country; 
+    private Country country;
+    private String airportName;
+    private List<Flight> destinations;
+    private List<Flight> takeoffs;
 
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
+    public Airport(Long id, Country country, String airportName, List<Flight> destinations, List<Flight> takeoffs) {
+        this.id = id;
         this.country = country;
-    }
-    
-    private String name ;
-
-    public Airport(Country country, String name) {
-        this.country = country;
-        this.name = name;
+        this.airportName = airportName;
+        this.destinations = destinations;
+        this.takeoffs = takeoffs;
     }
 
-    
-
-
-
-    public Airport() {
-    }
-    
-    
-    
     public Long getId() {
         return id;
     }
@@ -59,14 +47,39 @@ public class Airport implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Country getCountry() {
+        return country;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
- 
+    public String getAirportName() {
+        return airportName;
+    }
+
+    public void setAirportName(String airportName) {
+        this.airportName = airportName;
+    }
+
+    public List<Flight> getDestinations() {
+        return destinations;
+    }
+
+    public void setDestinations(List<Flight> destinations) {
+        this.destinations = destinations;
+    }
+
+    public List<Flight> getTakeoffs() {
+        return takeoffs;
+    }
+
+    public void setTakeoffs(List<Flight> takeoffs) {
+        this.takeoffs = takeoffs;
+    }
+
     
+    
+
 }

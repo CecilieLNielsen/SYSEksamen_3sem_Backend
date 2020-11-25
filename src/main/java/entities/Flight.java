@@ -6,6 +6,7 @@
 package entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,63 +22,63 @@ public class Flight implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long fligth_id;
-    private String airline;
-    private Airport des;
-    private Airport arival;
+    private int flightId;
+    private Date departure;
+    private Date arrival;
+    private Airport destinationAirport;
+    private Airport takeoffAirport;
     private int price;
 
-    public Flight(String airline, Airport des, Airport arival, int price) {
-        this.airline = airline;
-        this.des = des;
-        this.arival = arival;
+    public Flight(int flightId, Date departure, Date arrival, Airport destinationAirport, Airport takeoffAirport, int price) {
+        this.flightId = flightId;
+        this.departure = departure;
+        this.arrival = arrival;
+        this.destinationAirport = destinationAirport;
+        this.takeoffAirport = takeoffAirport;
         this.price = price;
     }
-    
-    
 
     public Flight() {
     }
 
-    public Long getId() {
-        return fligth_id;
+    public int getFlightId() {
+        return flightId;
     }
 
-    public void setId(Long fligth_id) {
-        this.fligth_id = fligth_id;
+    public void setFlightId(int flightId) {
+        this.flightId = flightId;
     }
 
-    
-    public Long getFligth_id() {
-        return fligth_id;
+    public Date getDeparture() {
+        return departure;
     }
 
-    public void setFligth_id(Long fligth_id) {
-        this.fligth_id = fligth_id;
+    public void setDeparture(Date departure) {
+        this.departure = departure;
     }
 
-    public String getAirline() {
-        return airline;
+    public Date getArrival() {
+        return arrival;
     }
 
-    public void setAirline(String airline) {
-        this.airline = airline;
+    public void setArrival(Date arrival) {
+        this.arrival = arrival;
     }
 
-    public Airport getDes() {
-        return des;
+    public Airport getDestinationAirport() {
+        return destinationAirport;
     }
 
-    public void setDes(Airport des) {
-        this.des = des;
+    public void setDestinationAirport(Airport destinationAirport) {
+        this.destinationAirport = destinationAirport;
     }
 
-    public Airport getArival() {
-        return arival;
+    public Airport getTakeoffAirport() {
+        return takeoffAirport;
     }
 
-    public void setArival(Airport arival) {
-        this.arival = arival;
+    public void setTakeoffAirport(Airport takeoffAirport) {
+        this.takeoffAirport = takeoffAirport;
     }
 
     public int getPrice() {
@@ -87,6 +88,10 @@ public class Flight implements Serializable {
     public void setPrice(int price) {
         this.price = price;
     }
+
+   
+
+  
 
     
     

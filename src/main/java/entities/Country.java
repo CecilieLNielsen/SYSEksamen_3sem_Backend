@@ -23,12 +23,13 @@ public class Country implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String countryName;
    @OneToMany(mappedBy = "Country")
     private List<Airport> airports;
 
-    public Country(String countryName, List<Airport> airports) {
+    public Country(int id, String countryName, List<Airport> airports) {
+        this.id = id;
         this.countryName = countryName;
         this.airports = airports;
     }
@@ -36,8 +37,6 @@ public class Country implements Serializable {
     public Country() {
     }
 
- 
-    
 
     public String getCountryName() {
         return countryName;
@@ -49,11 +48,11 @@ public class Country implements Serializable {
     }
     
     
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
