@@ -14,7 +14,7 @@ import java.sql.Date;
  */
 public class FlightDTO {
     
-   private int flightId;
+    private int flightId;
     private Date departure;
     private Date arrival;
     private String destinationAirport;

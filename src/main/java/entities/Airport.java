@@ -6,12 +6,15 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -27,8 +30,11 @@ public class Airport implements Serializable {
 
     @ManyToOne
     private Country country;
+
     private String airportName;
+   
     private List<Flight> destinations;
+    
     private List<Flight> takeoffs;
 
     public Airport(Long id, Country country, String airportName, List<Flight> destinations, List<Flight> takeoffs) {
@@ -87,5 +93,22 @@ public class Airport implements Serializable {
 
     public void setTakeoffs(List<Flight> takeoffs) {
         this.takeoffs = takeoffs;
+    }
+
+    //gives a list of destinations
+    public List<String> getDestinationsNameList() {
+        List<String> destinationNameList = new ArrayList();
+        for (Flight f : this.getDestinations()) {
+            destinationNameList.add(f.getDestinationAirport().getAirportName());
+        }
+        return destinationNameList;
+    }
+    //gives a list of takeoffs
+    public List<String> getTakeoffNameList() {
+        List<String> takeoffList = new ArrayList();
+        for (Flight f : this.getDestinations()) {
+            takeoffList.add(f.getTakeoffAirport().getAirportName());
+        }
+        return takeoffList;
     }
 }
