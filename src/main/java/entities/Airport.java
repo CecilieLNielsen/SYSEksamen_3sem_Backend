@@ -39,6 +39,16 @@ public class Airport implements Serializable {
         this.takeoffs = takeoffs;
     }
 
+    public Airport(Country country, String airportName, List<Flight> destinations, List<Flight> takeoffs) {
+        this.country = country;
+        this.airportName = airportName;
+        this.destinations = destinations;
+        this.takeoffs = takeoffs;
+    }
+
+    public Airport() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -78,8 +88,4 @@ public class Airport implements Serializable {
     public void setTakeoffs(List<Flight> takeoffs) {
         this.takeoffs = takeoffs;
     }
-
-    
-    
-
 }

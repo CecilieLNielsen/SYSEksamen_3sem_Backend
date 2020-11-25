@@ -1,7 +1,6 @@
 package facades;
 
 import utils.EMF_Creator;
-import entities.RenameMe;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import org.junit.jupiter.api.AfterAll;
@@ -16,7 +15,7 @@ import org.junit.jupiter.api.Test;
 public class FacadeExampleTest {
 
     private static EntityManagerFactory emf;
-    private static FacadeExample facade;
+    private static FlightFacade facade;
 
     public FacadeExampleTest() {
     }
@@ -24,7 +23,7 @@ public class FacadeExampleTest {
     @BeforeAll
     public static void setUpClass() {
         emf = EMF_Creator.createEntityManagerFactoryForTest();
-        facade = FacadeExample.getFacadeExample(emf);
+        facade = FlightFacade.getFacade(emf);
     }
 
     @AfterAll
@@ -53,11 +52,11 @@ public class FacadeExampleTest {
     public void tearDown() {
 //        Remove any data after each test was run
     }
-
+/*
     // TODO: Delete or change this method 
     @Test
     public void testAFacadeMethod() {
         assertEquals(2, facade.getRenameMeCount(), "Expects two rows in the database");
     }
-
+*/
 }

@@ -34,9 +34,13 @@ public class Country implements Serializable {
         this.airports = airports;
     }
 
-    public Country() {
+    public Country(String countryName, List<Airport> airports) {
+        this.countryName = countryName;
+        this.airports = airports;
     }
 
+    public Country() {
+    }
 
     public String getCountryName() {
         return countryName;
@@ -46,7 +50,6 @@ public class Country implements Serializable {
         this.countryName = countryName;
         this.airports = airports;
     }
-    
     
     public int getId() {
         return id;
@@ -63,7 +66,4 @@ public class Country implements Serializable {
     public void setAirports(List<Airport> airports) {
         this.airports = airports;
     }
-
-    
-    
 }

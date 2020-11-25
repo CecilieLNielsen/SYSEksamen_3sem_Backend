@@ -6,6 +6,7 @@
 package facades;
 
 import DTO.FlightDTO;
+import entities.Airport;
 import entities.Flight;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,26 +40,35 @@ public class FlightFacade {
         return instance;
     }
 
-    //returns all flights in local database. 
-    public List<FlightDTO> getAllFligth() {
+    public List<FlightDTO> getAllFligths() {
         EntityManager em = emf.createEntityManager();
-        
         try {
-            TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight F", Flight.class);
-            List<Flight> flights = new ArrayList();
-            flights = query.getResultList();
+            TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f", Flight.class);
             List<FlightDTO> allFlights = new ArrayList();
             for (Flight f : query.getResultList()) {
                 allFlights.add(new FlightDTO(f));
             }
-            System.out.println("Size Flight " + flights.size());
+            System.out.println("Size flight " + allFlights.size());
             return allFlights;
         } finally {
             em.close();
         }
     }
     
-    
-   
+    public List<FlightDTO> getFlightsByAirport(String airport){
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f WHERE :airport = :airport", Flight.class).setParameter("airport", airport);
+            
+            List<FlightDTO> flightsByAirport = new ArrayList();
+            for(Flight f : query.getResultList()){
+                flightsByAirport.add(new FlightDTO(f));
+            }
+            System.out.println("Size flight " + flightsByAirport.size());
+            return flightsByAirport;
+        } finally {
+            em.close();
+        }
+    }
 
 }

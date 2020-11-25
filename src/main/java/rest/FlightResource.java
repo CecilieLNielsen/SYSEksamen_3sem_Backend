@@ -50,7 +50,7 @@ public class FlightResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
-       return GSON.toJson(facade.getAllFligth());
+       return GSON.toJson(facade.getAllFligths());
     }
 
     /**

@@ -21,8 +21,12 @@ public class CountryDTO {
         this.countryName = country.getCountryName();
         //this.airports = country.getAirports();  //skal laves om i airports så vi har en metode der giver hver elements navn. 
     }
-    
-    
-    
 
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public List<String> getAirports() {
+        return airports;
+    }
 }
