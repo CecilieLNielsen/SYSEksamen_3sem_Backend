@@ -1,3 +1,4 @@
+/*
 package facades;
 
 import utils.EMF_Creator;
@@ -52,11 +53,11 @@ public class FacadeExampleTest {
     public void tearDown() {
 //        Remove any data after each test was run
     }
-/*
+
     // TODO: Delete or change this method 
     @Test
     public void testAFacadeMethod() {
         assertEquals(2, facade.getRenameMeCount(), "Expects two rows in the database");
     }
-*/
 }
+*/

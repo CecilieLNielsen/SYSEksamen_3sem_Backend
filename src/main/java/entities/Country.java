@@ -25,7 +25,8 @@ public class Country implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String countryName;
-   @OneToMany(mappedBy = "Country")
+    
+    @OneToMany
     private List<Airport> airports;
 
     public Country(int id, String countryName, List<Airport> airports) {

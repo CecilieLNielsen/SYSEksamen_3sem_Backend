@@ -5,10 +5,13 @@
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/entities/Airport.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/utils/HttpUtils.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/errorhandling/GenericExceptionMapper.java
+/Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/entities/Passenger.java
+/Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/rest/DemoResource.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/DTO/FlightDTO.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/DTO/CountryDTO.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/utils/EMF_Creator.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/errorhandling/ExceptionDTO.java
+/Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/entities/Booking.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/security/JWTAuthenticationFilter.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/entities/Role.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/security/JWTSecurityContext.java
