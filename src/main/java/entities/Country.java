@@ -6,11 +6,14 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
@@ -25,8 +28,8 @@ public class Country implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String countryName;
-    
-    @OneToMany
+
+   @OneToMany(mappedBy = "Country", cascade = {CascadeType.PERSIST})
     private List<Airport> airports;
 
     public Country(int id, String countryName, List<Airport> airports) {
@@ -67,4 +70,15 @@ public class Country implements Serializable {
     public void setAirports(List<Airport> airports) {
         this.airports = airports;
     }
+    
+    
+    //Gives a list of strings with airport names
+    public List<String> getAirportNameList() {
+        List<String> airportNameList = new ArrayList();
+        for (Airport a : this.getAirports()) {
+            airportNameList.add(a.getAirportName());
+        }
+        return airportNameList;
+    }
+    
 }

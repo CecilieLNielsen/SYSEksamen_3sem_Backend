@@ -19,7 +19,7 @@ public class CountryDTO {
 
     public CountryDTO(Country country) {
         this.countryName = country.getCountryName();
-        //this.airports = country.getAirports();  //skal laves om i airports så vi har en metode der giver hver elements navn. 
+        this.airports = country.getAirportNameList();  //skal laves om i airports så vi har en metode der giver hver elements navn. 
     }
 
     public String getCountryName() {

@@ -1,7 +1,10 @@
 entities/Country.class
-DTO/CountryDTO.class
 errorhandling/GenericExceptionMapper.class
+<<<<<<< HEAD
 entities/Passenger.class
+=======
+DTO/CountryDTO.class
+>>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f
 utils/EMF_Creator.class
 security/SharedSecret.class
 security/UserPrincipal.class
@@ -9,8 +12,8 @@ security/errorhandling/AuthenticationExceptionMapper.class
 entities/Flight.class
 DTO/AirportDTO.class
 entities/Role.class
-security/JWTAuthenticationFilter.class
 rest/ApplicationConfig.class
+security/JWTAuthenticationFilter.class
 security/RolesAllowedFilter.class
 errorhandling/ExceptionDTO.class
 DTO/FlightDTO.class
@@ -20,11 +23,11 @@ security/errorhandling/AuthenticationException.class
 cors/CorsFilter.class
 rest/DemoResource.class
 security/LoginEndpoint.class
+facades/FlightFacade.class
 security/errorhandling/NotAuthorizedExceptionMapper.class
 security/JWTSecurityContext.class
-facades/FlightFacade.class
-utils/HttpUtils.class
 facades/UserFacade.class
+utils/HttpUtils.class
 entities/Airport.class
 errorhandling/NotFoundException.class
 entities/User.class

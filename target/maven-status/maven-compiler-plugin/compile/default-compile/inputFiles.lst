@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/cors/CorsFilter.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/DTO/AirportDTO.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/NotAuthorizedExceptionMapper.java
@@ -29,3 +30,35 @@
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/utils/SetupTestUsers.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/facades/UserFacade.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/main/java/entities/Country.java
+=======
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/EMF_Creator.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/AuthenticationExceptionMapper.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/ApplicationConfig.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Airport.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/errorhandling/ExceptionDTO.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/cors/CorsFilter.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/SetupTestUsers.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Passenger.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/RolesAllowedFilter.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/HttpUtils.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/errorhandling/NotFoundException.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/JWTAuthenticationFilter.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/User.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Role.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Flight.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Country.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/errorhandling/GenericExceptionMapper.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/AuthenticationException.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/JWTSecurityContext.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/LoginEndpoint.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/FlightDTO.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/SharedSecret.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Booking.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/CountryDTO.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/NotAuthorizedExceptionMapper.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/facades/UserFacade.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/UserPrincipal.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/FlightResource.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/facades/FlightFacade.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/AirportDTO.java
+>>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f

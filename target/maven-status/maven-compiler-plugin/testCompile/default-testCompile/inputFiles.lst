@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/test/java/facades/FacadeExampleTest.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/test/java/rest/RenameMeResourceTest.java
 /Users/hassanainali/Dropbox/CPH business/3. semester/Eksamen/SYSEksamen_3sem_Backend/src/test/java/rest/LoginEndpointTest.java
+=======
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/test/java/rest/LoginEndpointTest.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/test/java/rest/FlightEndPointTest.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/test/java/facades/FacadeExampleTest.java
+>>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f
