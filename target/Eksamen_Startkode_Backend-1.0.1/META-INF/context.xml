@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<Context path="/jpareststarter"/>-->
 <Context path="/jpareststarter">
-<<<<<<< HEAD
   <!--    <Resource name="jdbc/DATABASE1"
-=======
-    
-    
-    <!--    <Resource name="jdbc/DATABASE1"
->>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f
     driverClassName="com.mysql.cj.jdbc.Driver"
     auth="Container"
     url="${CONNECTION_STR}"
@@ -17,8 +11,4 @@
     maxActive="20"
     maxIdle="5"
     maxWait="10000"/>-->
-<<<<<<< HEAD
 </Context>
-=======
-</Context>
->>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f

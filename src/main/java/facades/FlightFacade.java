@@ -70,5 +70,16 @@ public class FlightFacade {
             em.close();
         }
     }
+    
+    public FlightDTO getFlightById(int id) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            Flight flight = em.find(Flight.class, id);
+            FlightDTO flightDTO = new FlightDTO(flight);
+            return flightDTO;
+        } finally {
+            em.close();
+        }
+    }
 
 }

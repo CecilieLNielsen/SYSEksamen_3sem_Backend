@@ -1,15 +1,13 @@
 entities/Country.class
 errorhandling/GenericExceptionMapper.class
-<<<<<<< HEAD
-entities/Passenger.class
-=======
 DTO/CountryDTO.class
->>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f
+entities/Passenger.class
 utils/EMF_Creator.class
 security/SharedSecret.class
 security/UserPrincipal.class
 security/errorhandling/AuthenticationExceptionMapper.class
 entities/Flight.class
+facades/BookingFacade.class
 DTO/AirportDTO.class
 entities/Role.class
 rest/ApplicationConfig.class

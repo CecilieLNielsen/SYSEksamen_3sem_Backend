@@ -21,12 +21,23 @@ public class Booking implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private Flight flight;
     private Passenger passengerInfo;
     private Date created;
+
+    public Booking(Flight flight, /*Passenger passengerInfo*/ Date created) {
+        this.flight = flight;
+      //  this.passengerInfo = passengerInfo;
+        this.created = created;
+    }
+
+    public Booking() {
+    }
+    
+    
     
 
     public Long getId() {
