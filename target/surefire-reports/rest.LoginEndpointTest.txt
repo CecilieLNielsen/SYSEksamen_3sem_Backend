@@ -1,6 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: rest.LoginEndpointTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.523 s - in rest.LoginEndpointTest
+=======
 Tests run: 10, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 5.972 s <<< FAILURE! - in rest.LoginEndpointTest
 testAutorizedAdminCannotAccesUserPage  Time elapsed: 1.384 s  <<< FAILURE!
 java.lang.AssertionError: 
@@ -72,3 +75,4 @@ Expected status code <200> but was <404>.
 
 	at rest.LoginEndpointTest.serverIsRunning(LoginEndpointTest.java:115)
 
+>>>>>>> bb350c66c29765d9cd972fb9d13c87ec3ac7550f
