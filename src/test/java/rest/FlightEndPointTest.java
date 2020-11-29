@@ -1,4 +1,3 @@
-
 package rest;
 
 import entities.Airport;
@@ -48,19 +47,23 @@ public class FlightEndPointTest {
         //This method must be called before you request the EntityManagerFactory
         EMF_Creator.startREST_TestWithDB();
         emf = EMF_Creator.createEntityManagerFactoryForTest();
+        EntityManager em = emf.createEntityManager();
 
         httpServer = startServer();
+
         //Setup RestAssured
         RestAssured.baseURI = SERVER_URL;
         RestAssured.port = SERVER_PORT;
         RestAssured.defaultParser = Parser.JSON;
+
     }
 
     @AfterAll
     public static void closeTestServer() {
+        //System.in.read();
+
         //Don't forget this, if you called its counterpart in @BeforeAll
         EMF_Creator.endREST_TestWithDB();
-
         httpServer.shutdownNow();
     }
 
@@ -69,7 +72,10 @@ public class FlightEndPointTest {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            
+
+            em.createQuery("delete from Flight").executeUpdate();
+            em.createQuery("delete from Airport").executeUpdate();
+            em.createQuery("delete from Country").executeUpdate();
 
             List<Airport> airports = new ArrayList();
             Flight flight = new Flight();
@@ -84,9 +90,9 @@ public class FlightEndPointTest {
             flight.setDestinationAirport(airport);
             flight.setTakeoffAirport(airport2);
             country.setAirports(airports);
-            
+
             airport.setCountry(country);
-            
+
             em.persist(country);
             em.persist(flight);
             em.getTransaction().commit();
@@ -94,6 +100,13 @@ public class FlightEndPointTest {
         } finally {
             em.close();
         }
+    }
+
+    //virker når man køre denne fil alene men ikke når man køre den i clean og build....
+    @Test
+    public void testServerIsUp() {
+        System.out.println("Testing is server UP");
+        given().when().get("/flight").then().statusCode(200);
     }
 
     @Test
@@ -104,10 +117,8 @@ public class FlightEndPointTest {
                 .get("/flight/")
                 .then()
                 .statusCode(200)
-                .body("0", hasSize(1));
-                
-                
-                
+                .body("flight", hasSize(1));
+
     }
 
 }

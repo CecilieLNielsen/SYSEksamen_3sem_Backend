@@ -88,9 +88,14 @@ public class FlightFacadeTest {
     public void tearDown() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-       
+        em.createQuery("delete from Flight").executeUpdate();
+        em.createQuery("delete from Airport").executeUpdate();
+        em.createQuery("delete from Country").executeUpdate();
         
+        
+
         em.getTransaction().commit();
+        em.close();
     }
 
 //    @Test
