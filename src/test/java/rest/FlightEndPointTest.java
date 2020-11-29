@@ -69,9 +69,8 @@ public class FlightEndPointTest {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            em.createQuery("delete from Country").executeUpdate();
-            em.createQuery("delete from Airport").executeUpdate();
-            em.createQuery("delete from Flight").executeUpdate();
+            
+
             List<Airport> airports = new ArrayList();
             Flight flight = new Flight();
             Airport airport = new Airport();
@@ -105,7 +104,7 @@ public class FlightEndPointTest {
                 .get("/flight/")
                 .then()
                 .statusCode(200)
-                .body("flight", hasSize(1));
+                .body("0", hasSize(1));
                 
                 
                 

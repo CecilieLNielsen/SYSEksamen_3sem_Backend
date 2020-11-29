@@ -8,8 +8,8 @@ package facades;
 import DTO.FlightDTO;
 import entities.Booking;
 import entities.Flight;
+import entities.Passenger;
 import java.sql.Date;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
@@ -34,20 +34,38 @@ public class BookingFacade {
         return instance;
     }
 
-//    public String makeBooking(Date created, Flight flight, int testPersonID) {
-//        EntityManager em = emf.createEntityManager();
-//        try {
-//            Booking booking = new Booking();
-//            int flightid = flight.getFlightId();
-//           // flight = FlightFacade.getFacade(emf).getFlightById(flightid);
-//            created.toLocalDate(); 
-//            booking.setCreated(created);
-//            booking.setFlight(flight);
-//            em.persist(em);
-//        } finally {
-//            em.close();
-//        }
-//
-//    }
+    public Booking makeBooking(int flightid, Passenger testPerson) {
+        
+        
+        EntityManager em = emf.createEntityManager();
+        try {
+
+            Booking booking = new Booking();
+            Date created = new Date(0, 0, 0);
+            
+            FlightDTO flightdto = FlightFacade.getFacade(emf).getFlightById(flightid);
+            System.out.println(flightdto);
+            created.toInstant();
+            Flight bookedFlight = new Flight();
+            bookedFlight.setFlightId(flightdto.getFlightId());
+            
+            System.out.println(created);
+            booking.setCreated(created);
+            booking.setFlight(bookedFlight);
+            booking.setPassengerInfo(testPerson);
+            em.persist(booking);
+
+            return booking;
+        } finally {
+            em.close();
+        }
+
+    }
+    
+    
+    
+    
+
+
 
 }

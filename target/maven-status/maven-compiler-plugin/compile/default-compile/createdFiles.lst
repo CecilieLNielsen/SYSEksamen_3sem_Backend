@@ -4,6 +4,7 @@ DTO/CountryDTO.class
 entities/Passenger.class
 utils/EMF_Creator.class
 security/SharedSecret.class
+rest/BookingResource.class
 security/UserPrincipal.class
 security/errorhandling/AuthenticationExceptionMapper.class
 entities/Flight.class

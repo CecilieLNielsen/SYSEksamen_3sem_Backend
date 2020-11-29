@@ -29,4 +29,5 @@
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/UserPrincipal.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/FlightResource.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/facades/FlightFacade.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/BookingResource.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/DTO/AirportDTO.java

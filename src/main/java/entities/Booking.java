@@ -7,10 +7,13 @@ package entities;
 
 import java.io.Serializable;
 import java.sql.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 /**
  *
@@ -23,14 +26,16 @@ public class Booking implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+    @ManyToOne(cascade = {CascadeType.PERSIST})
     private Flight flight;
+    @ManyToOne(cascade = {CascadeType.PERSIST})
     private Passenger passengerInfo;
+    
     private Date created;
 
-    public Booking(Flight flight, /*Passenger passengerInfo*/ Date created) {
+    public Booking(Flight flight, Passenger passengerInfo, Date created) {
         this.flight = flight;
-      //  this.passengerInfo = passengerInfo;
+         this.passengerInfo = passengerInfo;
         this.created = created;
     }
 
