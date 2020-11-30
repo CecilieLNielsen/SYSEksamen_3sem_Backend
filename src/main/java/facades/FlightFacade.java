@@ -54,15 +54,15 @@ public class FlightFacade {
             em.close();
         }
     }
-    
-    public List<FlightDTO> getFlightsByAirport(String airport){
+
+    public List<FlightDTO> getFlightsByAirport(String airport) {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f "
                     + "WHERE :airport = :airport", Flight.class).setParameter("airport", airport);
-            
+
             List<FlightDTO> flightsByAirport = new ArrayList();
-            for(Flight f : query.getResultList()){
+            for (Flight f : query.getResultList()) {
                 flightsByAirport.add(new FlightDTO(f));
             }
             System.out.println("Size flight " + flightsByAirport.size());
@@ -71,13 +71,16 @@ public class FlightFacade {
             em.close();
         }
     }
-    
+
     public FlightDTO getFlightById(int id) {
+        return new FlightDTO(getFlightEntityById(id));
+    }
+
+    public Flight getFlightEntityById(int id) {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f WHERE :id = :id", Flight.class).setParameter("id", id);
-            FlightDTO flightDTO = new FlightDTO(query.getSingleResult());
-            return flightDTO;
+            return query.getSingleResult();
         } finally {
             em.close();
         }

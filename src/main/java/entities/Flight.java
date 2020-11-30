@@ -45,6 +45,12 @@ public class Flight implements Serializable {
         this.takeoffAirport = takeoffAirport;
         this.price = price;
     }
+    
+    public Flight(Date departure, Date arrival, int price) {
+        this.departure = departure;
+        this.arrival = arrival;
+        this.price = price;
+    }
 
     public Flight() {
     }

@@ -38,13 +38,27 @@ public class PassengerFacade {
         EntityManager em = emf.createEntityManager();
         try {
             Passenger pass = new Passenger();
-            TypedQuery<Passenger> query = em.createQuery("SELECT p FROM Passenger "
-                    + "p WHERE :firstName = :firstName AND :lastName = :lastName", Passenger.class)
+            TypedQuery<Passenger> query = em.createQuery(
+                    "SELECT p FROM Passenger p "
+                    + "WHERE :firstName = :firstName "
+                    + "AND :lastName = :lastName"
+                    , Passenger.class)
                     .setParameter("firstName", firstName)
                     .setParameter("lastName", lastName);
             pass = query.getSingleResult();
             return pass;
 
+        } finally {
+            em.close();
+
+        }
+    }
+    
+    public Passenger getPassengerById(int id) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            TypedQuery<Passenger> query = em.createQuery("SELECT p FROM Passenger p WHERE :id = :id", Passenger.class).setParameter("id", id);
+            return query.getSingleResult();
         } finally {
             em.close();
 

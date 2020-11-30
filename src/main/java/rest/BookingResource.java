@@ -5,6 +5,7 @@
  */
 package rest;
 
+import DTO.MakeBookingDTO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import entities.Passenger;
@@ -28,7 +29,7 @@ import utils.EMF_Creator;
  *
  * @author rh
  */
-@Path("Booking")
+@Path("booking")
 public class BookingResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory();
@@ -57,17 +58,18 @@ public class BookingResource {
     }
 
     /**
-     * PUT method for updating or creating an instance of BookingResource
+     * PUT method for creating an booking
      *
-     * @param content representation for the resource
+     * @param booking json string
+     * @return String msg
      */
-    @Path("/booking/make/{flightid}/{passengerFirstname}/{passengerLastName}")
-    @PUT
+    @POST
+    @Path("/book")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public String makeBooking(@PathParam("flightid") int flightID, 
-            @PathParam("passengerFirstname") String passengerFirstname,  @PathParam("passengerLastName") String passengerLastName) {
-        return GSON.toJson(facade.makeBooking(flightID, passengerFirstname, passengerLastName));
-          
+    public String makeBooking(String booking) {
+        MakeBookingDTO bookingDTO = GSON.fromJson(booking, MakeBookingDTO.class);
+        facade.makeBooking(bookingDTO);
+        return "{\"msg\":\"Your booking has been placed!\"}";
     }
 }

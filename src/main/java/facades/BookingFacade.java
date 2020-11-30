@@ -6,6 +6,7 @@
 package facades;
 
 import DTO.FlightDTO;
+import DTO.MakeBookingDTO;
 import entities.Booking;
 import entities.Flight;
 import entities.Passenger;
@@ -21,6 +22,8 @@ public class BookingFacade {
 
     private static BookingFacade instance;
     private static EntityManagerFactory emf;
+    private static PassengerFacade pf;
+    private static FlightFacade ff;
 
     private BookingFacade() {
 
@@ -30,6 +33,8 @@ public class BookingFacade {
         if (instance == null) {
             emf = _emf;
             instance = new BookingFacade();
+            pf = PassengerFacade.getFacade(emf);
+            ff = FlightFacade.getFacade(emf);
         }
         return instance;
     }
@@ -64,6 +69,18 @@ public class BookingFacade {
 
     }
 
+    public void makeBooking(MakeBookingDTO bookingDTO) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Flight flight = ff.getFlightEntityById(bookingDTO.getFlightId());
+            Passenger passenger = pf.getPassengerById(bookingDTO.getUserId());
+            Booking booking = new Booking(flight, passenger);
+            em.persist(booking);
+            em.getTransaction().commit();
+        } finally {
+            em.close();
+        }
 
-
+    }
 }

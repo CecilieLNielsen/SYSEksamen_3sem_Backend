@@ -30,21 +30,20 @@ public class Booking implements Serializable {
     private Flight flight;
     @ManyToOne
     private Passenger passengerInfo;
+    private Date created;
     
     
-
-    public Booking(Flight flight, Passenger passengerInfo /*Date created*/) {
-        this.flight = flight;
-         this.passengerInfo = passengerInfo;
-       // this.created = created;
-    }
 
     public Booking() {
     }
-    
-    
-    
 
+    public Booking(Flight flight, Passenger passengerInfo) {
+        this.flight = flight;
+        this.passengerInfo = passengerInfo;
+        this.created = new Date(System.currentTimeMillis());
+    }
+    
+    
     public int getId() {
         return id;
     }
