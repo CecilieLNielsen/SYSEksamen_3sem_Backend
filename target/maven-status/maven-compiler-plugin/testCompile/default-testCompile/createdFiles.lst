@@ -1,4 +1,5 @@
 facades/PassengerFacadeTest.class
+rest/FlightEndPointTest.class
 rest/LoginEndpointTest.class
 facades/FlightFacadeTest.class
 facades/BookingFacadeTest.class

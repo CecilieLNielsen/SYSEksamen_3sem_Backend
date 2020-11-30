@@ -38,7 +38,7 @@ public class FlightFacadeTest {
         facade = FlightFacade.getFacade(emf);
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        
+
     }
 
     @AfterAll
@@ -57,12 +57,13 @@ public class FlightFacadeTest {
         Airport airport2 = new Airport();
         airport.setAirportName("Spain airport");
         airport2.setAirportName("France airport");
-        f1.setFlightId(1);
+
         airports.add(airport);
         airports.add(airport2);
         Country country = new Country("Spain", airports);
         f1.setDestinationAirport(airport);
         f1.setTakeoffAirport(airport2);
+        f1.setFlightId(1);
         country.setAirports(airports);
         System.out.println(f1.getFlightId());
         System.out.println(f1.getDestinationAirport().getAirportName());
@@ -71,9 +72,6 @@ public class FlightFacadeTest {
         try {
 
             em.getTransaction().begin();
-            em.createQuery("delete from Country").executeUpdate();
-            em.createQuery("delete from Airport").executeUpdate();
-            em.createQuery("delete from Flight").executeUpdate();
 
             em.persist(country);
             em.persist(f1);
@@ -91,27 +89,24 @@ public class FlightFacadeTest {
         em.createQuery("delete from Flight").executeUpdate();
         em.createQuery("delete from Airport").executeUpdate();
         em.createQuery("delete from Country").executeUpdate();
-        
-        
 
         em.getTransaction().commit();
         em.close();
     }
 
-//    @Test
-//    public void testGetById() {
-//        
-//        int id = f1.getFlightId();
-//        FlightDTO flightdto = facade.getFlightById(id);
-//        System.out.println(flightdto.getFlightId());
-//        assertEquals("Spain airport", flightdto.getDestinationAirport());
-//    }
-//    
+    @Test
+    public void testGetById() {
+
+        int id = 1;
+        FlightDTO flightdto = facade.getFlightById(id);
+        System.out.println(flightdto.getFlightId());
+        assertEquals("Spain airport", flightdto.getDestinationAirport());
+    }
+
     @Test
     public void testGetAll() {
         List<FlightDTO> result = facade.getAllFligths();
         assertEquals(1, result.size());
     }
-    
 
 }
