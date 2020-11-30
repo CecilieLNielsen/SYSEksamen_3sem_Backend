@@ -5,6 +5,7 @@ entities/Passenger.class
 utils/EMF_Creator.class
 security/SharedSecret.class
 rest/BookingResource.class
+facades/PassengerFacade.class
 security/UserPrincipal.class
 security/errorhandling/AuthenticationExceptionMapper.class
 entities/Flight.class

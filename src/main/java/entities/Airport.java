@@ -26,7 +26,7 @@ public class Airport implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @ManyToOne
     private Country country;
@@ -37,7 +37,7 @@ public class Airport implements Serializable {
     
     private List<Flight> takeoffs;
 
-    public Airport(Long id, Country country, String airportName, List<Flight> destinations, List<Flight> takeoffs) {
+    public Airport(int id, Country country, String airportName, List<Flight> destinations, List<Flight> takeoffs) {
         this.id = id;
         this.country = country;
         this.airportName = airportName;
@@ -55,11 +55,11 @@ public class Airport implements Serializable {
     public Airport() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

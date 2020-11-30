@@ -5,8 +5,8 @@
  */
 package facades;
 
+import DTO.FlightDTO;
 import entities.Airport;
-import entities.Booking;
 import entities.Country;
 import entities.Flight;
 import entities.Passenger;
@@ -26,17 +26,17 @@ import utils.EMF_Creator;
  *
  * @author rh
  */
-public class BookingFacadeTest {
+public class PassengerFacadeTest {
 
     private static EntityManagerFactory emf;
-    private static BookingFacade facade;
+    private static PassengerFacade facade;
 
-    private Flight f1;
-    
+    private Passenger p1, p2;
+
     @BeforeAll
     public static void setUpClass() {
         emf = EMF_Creator.createEntityManagerFactoryForTest();
-        facade = BookingFacade.getFacade(emf);
+        facade = PassengerFacade.getFacade(emf);
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
@@ -47,36 +47,28 @@ public class BookingFacadeTest {
 //        Clean up database after test is done or use a persistence unit with drop-and-create to start up clean on every test
     }
 
+    // Setup the DataBase in a known state BEFORE EACH TEST
+    //TODO -- Make sure to change the code below to use YOUR OWN entity class
     @BeforeEach
     public void setUp() {
         EntityManager em = emf.createEntityManager();
-        List<Airport> airports = new ArrayList();
-        Flight f1 = new Flight();
-        Airport airport = new Airport();
-        Airport airport2 = new Airport();
-        airport.setAirportName("Spain airport");
-        airport2.setAirportName("France airport");
-        f1.setFlightId(1);
-        airports.add(airport);
-        airports.add(airport2);
-        Country country = new Country("Spain", airports);
-        f1.setDestinationAirport(airport);
-        f1.setTakeoffAirport(airport2);
-        country.setAirports(airports);
-        System.out.println(f1.getFlightId());
-        System.out.println(f1.getDestinationAirport().getAirportName());
-        airport.setCountry(country);
 
         try {
+            p1 = new Passenger();
+            p2 = new Passenger();
+            p1.setEmail("testPass@email.com");
+            p1.setFirstName("Peter");
+            p1.setLastName("Petersen");
+            p1.setPhoneNumber(12345678);
+            
+            p2.setEmail("p2@email.com");
+            p2.setFirstName("Rasmus");
+            p2.setLastName("Rasmussen");
+            p2.setPhoneNumber(87654321);
 
             em.getTransaction().begin();
-            em.createQuery("delete from Country").executeUpdate();
-            em.createQuery("delete from Airport").executeUpdate();
-            em.createQuery("delete from Flight").executeUpdate();
-             em.createQuery("delete from Passenger").executeUpdate();
-
-            em.persist(country);
-            em.persist(f1);
+            em.persist(p1);
+            em.persist(p2);
             em.getTransaction().commit();
 
         } finally {
@@ -88,16 +80,18 @@ public class BookingFacadeTest {
     public void tearDown() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
+        em.createQuery("delete from Passenger").executeUpdate();
 
         em.getTransaction().commit();
+        em.close();
     }
 
+
 //    @Test
-//    public void testMakeBooking() {
-//        Booking book = new Booking();
-//        Passenger testPassenger = new Passenger("Peter", "Pertersen", "peter@email.dk", 123456789);
-//        book = facade.makeBooking(f1.getFlightId(), testPassenger.getFirstName(), testPassenger.getLastName());
-//        assertEquals(1, book.getFlight().getFlightId());
+//    public void testGetByName() {
+//        Passenger pass = facade.getPassengerByName("Peter", "Petersen");
+//        assertEquals("Peter", pass.getFirstName());
 //    }
+//    
 
 }

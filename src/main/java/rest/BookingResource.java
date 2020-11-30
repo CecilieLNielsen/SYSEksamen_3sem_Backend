@@ -7,8 +7,10 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import entities.Passenger;
 import facades.BookingFacade;
 import javax.persistence.EntityManagerFactory;
+import javax.validation.Valid;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -17,6 +19,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 import utils.EMF_Creator;
 
@@ -58,10 +61,13 @@ public class BookingResource {
      *
      * @param content representation for the resource
      */
-    @Path("/booking/make/")
-    @POST
+    @Path("/booking/make/{flightid}/{passengerFirstname}/{passengerLastName}")
+    @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public void makeBooking() {
+    public String makeBooking(@PathParam("flightid") int flightID, 
+            @PathParam("passengerFirstname") String passengerFirstname,  @PathParam("passengerLastName") String passengerLastName) {
+        return GSON.toJson(facade.makeBooking(flightID, passengerFirstname, passengerLastName));
+          
     }
 }

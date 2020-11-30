@@ -6,6 +6,7 @@
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/cors/CorsFilter.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/SetupTestUsers.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/rest/DemoResource.java
+/home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/facades/PassengerFacade.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/entities/Passenger.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/security/RolesAllowedFilter.java
 /home/rh/Documents/CA4/SYSEksamen_3sem_Backend/src/main/java/utils/HttpUtils.java

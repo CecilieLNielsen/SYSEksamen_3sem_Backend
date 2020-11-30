@@ -34,37 +34,35 @@ public class BookingFacade {
         return instance;
     }
 
-    public Booking makeBooking(int flightid, Passenger testPerson) {
-        
-        
+    private EntityManager getEntityManager() {
+        return emf.createEntityManager();
+    }
+
+    public Booking makeBooking(int flightid, String passengerFirstName, String passengerLastName) {
         EntityManager em = emf.createEntityManager();
         try {
-
+            em.getTransaction().begin();
+            PassengerFacade pf = PassengerFacade.getFacade(emf);
             Booking booking = new Booking();
-            Date created = new Date(0, 0, 0);
-            
+            Passenger passengerinfo = pf.getPassengerByName(passengerFirstName, passengerLastName);
             FlightDTO flightdto = FlightFacade.getFacade(emf).getFlightById(flightid);
-            System.out.println(flightdto);
-            created.toInstant();
+
             Flight bookedFlight = new Flight();
-            bookedFlight.setFlightId(flightdto.getFlightId());
-            
-            System.out.println(created);
-            booking.setCreated(created);
+            bookedFlight.setFlightId(flightid);
+
             booking.setFlight(bookedFlight);
-            booking.setPassengerInfo(testPerson);
+            booking.setPassengerInfo(passengerinfo);
+
             em.persist(booking);
 
+            em.getTransaction().commit();
             return booking;
+
         } finally {
             em.close();
         }
 
     }
-    
-    
-    
-    
 
 
 

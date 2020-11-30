@@ -50,29 +50,32 @@ public class SetupTestUsers {
 
         EntityManager em = emf.createEntityManager();
         try {
-            em.getTransaction().begin();
-            em.createQuery("delete from Country").executeUpdate();
-            em.createQuery("delete from Airport").executeUpdate();
-            em.createQuery("delete from Flight").executeUpdate();
-            List<Airport> airports = new ArrayList();
-            Flight flight = new Flight();
-            Airport airport = new Airport();
-            Airport airport2 = new Airport();
-            airport.setAirportName("Spain airport");
-            airport2.setAirportName("France airport");
+//            em.getTransaction().begin();
+//            em.createQuery("delete from Country").executeUpdate();
+//            em.createQuery("delete from Airport").executeUpdate();
+//            em.createQuery("delete from Flight").executeUpdate();
+//            List<Airport> airports = new ArrayList();
+//            Flight flight = new Flight();
+//            Airport airport = new Airport();
+//            Airport airport2 = new Airport();
+//            airport.setAirportName("Spain airport");
+//            airport2.setAirportName("France airport");
+//
+//            airports.add(airport);
+//            airports.add(airport2);
+//            Country country = new Country("Spain", airports);
+//            flight.setDestinationAirport(airport);
+//            flight.setTakeoffAirport(airport2);
+//            country.setAirports(airports);
+//
+//            airport.setCountry(country);
+//
+//            em.persist(country);
+//            em.persist(flight);
+//            em.getTransaction().commit();
 
-            airports.add(airport);
-            airports.add(airport2);
-            Country country = new Country("Spain", airports);
-            flight.setDestinationAirport(airport);
-            flight.setTakeoffAirport(airport2);
-            country.setAirports(airports);
 
-            airport.setCountry(country);
-
-            em.persist(country);
-            em.persist(flight);
-            em.getTransaction().commit();
+        
 
         } finally {
             em.close();

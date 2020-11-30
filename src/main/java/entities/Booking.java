@@ -25,18 +25,18 @@ public class Booking implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @ManyToOne(cascade = {CascadeType.PERSIST})
+    private int id;
+    @ManyToOne
     private Flight flight;
-    @ManyToOne(cascade = {CascadeType.PERSIST})
+    @ManyToOne
     private Passenger passengerInfo;
     
-    private Date created;
+    
 
-    public Booking(Flight flight, Passenger passengerInfo, Date created) {
+    public Booking(Flight flight, Passenger passengerInfo /*Date created*/) {
         this.flight = flight;
          this.passengerInfo = passengerInfo;
-        this.created = created;
+       // this.created = created;
     }
 
     public Booking() {
@@ -45,11 +45,11 @@ public class Booking implements Serializable {
     
     
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -69,14 +69,6 @@ public class Booking implements Serializable {
         this.passengerInfo = passengerInfo;
     }
 
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-    
     
 
     

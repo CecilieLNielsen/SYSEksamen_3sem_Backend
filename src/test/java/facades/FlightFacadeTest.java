@@ -38,7 +38,7 @@ public class FlightFacadeTest {
         facade = FlightFacade.getFacade(emf);
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-
+        
     }
 
     @AfterAll
@@ -112,5 +112,6 @@ public class FlightFacadeTest {
         List<FlightDTO> result = facade.getAllFligths();
         assertEquals(1, result.size());
     }
+    
 
 }

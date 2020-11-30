@@ -21,13 +21,15 @@ public class Passenger implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
+    
+    
     private String firstName;
     private String lastName;
     private String email;
     private int phoneNumber;
 
-    public Passenger(Long id, String firstName, String lastName, String email, int phoneNumber) {
+    public Passenger(int id, String firstName, String lastName, String email, int phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,11 +47,11 @@ public class Passenger implements Serializable {
     public Passenger() {
     }
     
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

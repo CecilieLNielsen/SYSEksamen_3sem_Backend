@@ -58,7 +58,8 @@ public class FlightFacade {
     public List<FlightDTO> getFlightsByAirport(String airport){
         EntityManager em = emf.createEntityManager();
         try {
-            TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f WHERE :airport = :airport", Flight.class).setParameter("airport", airport);
+            TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f "
+                    + "WHERE :airport = :airport", Flight.class).setParameter("airport", airport);
             
             List<FlightDTO> flightsByAirport = new ArrayList();
             for(Flight f : query.getResultList()){
