@@ -13,8 +13,11 @@ public class HttpUtils {
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
         //con.setRequestProperty("Accept", "application/json;charset=UTF-8");
-        con.setRequestProperty("Accept", "application/json");
-        con.setRequestProperty("User-Agent", "server");
+        con.setRequestProperty("x-rapidapi-key", "b4a0d8763amsh99412c790e6fd33p1042efjsnc569ed6bb8c4");
+        //con.setRequestProperty("x-rapidapi-host", "wft-geo-db.p.rapidapi.com");
+        //con.setRequestProperty("useQueryString", "true");
+        //con.setRequestProperty("Accept", "application/json");
+        //con.setRequestProperty("User-Agent", "server");
 
         Scanner scan = new Scanner(con.getInputStream());
         String jsonStr = null;

@@ -69,4 +69,5 @@ public class FlightResource {
     public String getFlightById(@PathParam("id") int id) {
         return GSON.toJson(facade.getFlightById(id));
     }
+    
 }
