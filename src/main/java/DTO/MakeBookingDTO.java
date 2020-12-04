@@ -13,10 +13,12 @@ public class MakeBookingDTO {
 
     private final int flightId;
     private final int userId;
+    private final int id;
 
-    public MakeBookingDTO(int flightId, int userId) {
+    public MakeBookingDTO(int id, int flightId, int userId) {
         this.flightId = flightId;
         this.userId = userId;
+        this.id = id;
     }
 
     public int getFlightId() {
@@ -26,5 +28,11 @@ public class MakeBookingDTO {
     public int getUserId() {
         return userId;
     }
+
+    public int getId() {
+        return id;
+    }
+    
+    
 
 }

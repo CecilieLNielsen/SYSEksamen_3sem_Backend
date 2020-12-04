@@ -68,7 +68,7 @@ public class PassengerFacadeTest {
 
             em.getTransaction().begin();
             em.persist(p1);
-            em.persist(p2);
+            
             em.getTransaction().commit();
 
         } finally {
@@ -87,11 +87,11 @@ public class PassengerFacadeTest {
     }
 
 
-//    @Test
-//    public void testGetByName() {
-//        Passenger pass = facade.getPassengerByName("Peter", "Petersen");
-//        assertEquals("Peter", pass.getFirstName());
-//    }
-//    
+    @Test
+    public void testGetByName() {
+        Passenger pass = facade.getPassengerByName("Peter", "Petersen");
+        assertEquals("Peter", pass.getFirstName());
+    }
+    
 
 }

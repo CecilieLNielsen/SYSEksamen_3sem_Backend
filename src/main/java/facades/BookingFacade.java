@@ -13,6 +13,7 @@ import entities.Passenger;
 import java.sql.Date;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -42,32 +43,32 @@ public class BookingFacade {
     private EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-
-    public Booking makeBooking(int flightid, String passengerFirstName, String passengerLastName) {
-        EntityManager em = emf.createEntityManager();
-        try {
-            em.getTransaction().begin();
-            PassengerFacade pf = PassengerFacade.getFacade(emf);
-            Booking booking = new Booking();
-            Passenger passengerinfo = pf.getPassengerByName(passengerFirstName, passengerLastName);
-            FlightDTO flightdto = FlightFacade.getFacade(emf).getFlightById(flightid);
-
-            Flight bookedFlight = new Flight();
-            bookedFlight.setFlightId(flightid);
-
-            booking.setFlight(bookedFlight);
-            booking.setPassengerInfo(passengerinfo);
-
-            em.persist(booking);
-
-            em.getTransaction().commit();
-            return booking;
-
-        } finally {
-            em.close();
-        }
-
-    }
+//
+//    public Booking makeBooking(int flightid, String passengerFirstName, String passengerLastName) {
+//        EntityManager em = emf.createEntityManager();
+//        try {
+//            em.getTransaction().begin();
+//            PassengerFacade pf = PassengerFacade.getFacade(emf);
+//            Booking booking = new Booking();
+//            Passenger passengerinfo = pf.getPassengerByName(passengerFirstName, passengerLastName);
+//            FlightDTO flightdto = FlightFacade.getFacade(emf).getFlightById(flightid);
+//
+//            Flight bookedFlight = new Flight();
+//            bookedFlight.setFlightId(flightid);
+//
+//            booking.setFlight(bookedFlight);
+//            booking.setPassengerInfo(passengerinfo);
+//
+//            em.persist(booking);
+//
+//            em.getTransaction().commit();
+//            return booking;
+//
+//        } finally {
+//            em.close();
+//        }
+//
+//    }
 
     public void makeBooking(MakeBookingDTO bookingDTO) {
         EntityManager em = emf.createEntityManager();
@@ -83,4 +84,17 @@ public class BookingFacade {
         }
 
     }
+
+    public Booking getBooking(int id) {
+        EntityManager em = emf.createEntityManager();
+        try {
+
+            TypedQuery<Booking> query = em.createQuery("SELECT b FROM Booking b WHERE :id = :id", Booking.class).setParameter("id", id);
+            return query.getSingleResult();
+        } finally {
+            em.close();
+        }
+    }
 }
+
+

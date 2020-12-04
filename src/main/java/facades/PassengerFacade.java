@@ -46,6 +46,7 @@ public class PassengerFacade {
                     .setParameter("firstName", firstName)
                     .setParameter("lastName", lastName);
             pass = query.getSingleResult();
+            
             return pass;
 
         } finally {
