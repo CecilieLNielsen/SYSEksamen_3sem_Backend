@@ -60,7 +60,7 @@ public class PassengerFacadeTest {
             p1.setFirstName("Peter");
             p1.setLastName("Petersen");
             p1.setPhoneNumber(12345678);
-            
+
             p2.setEmail("p2@email.com");
             p2.setFirstName("Rasmus");
             p2.setLastName("Rasmussen");
@@ -68,7 +68,7 @@ public class PassengerFacadeTest {
 
             em.getTransaction().begin();
             em.persist(p1);
-            
+            em.persist(p2);
             em.getTransaction().commit();
 
         } finally {
@@ -86,12 +86,16 @@ public class PassengerFacadeTest {
         em.close();
     }
 
+//    @Test
+//    public void testGetByName() {
+//        Passenger pass = facade.getPassengerByName("Peter", "Petersen");
+//        assertEquals("Peter", pass.getFirstName());
+//    }
 
     @Test
-    public void testGetByName() {
-        Passenger pass = facade.getPassengerByName("Peter", "Petersen");
-        assertEquals("Peter", pass.getFirstName());
+    public void testGetByID() {
+        Passenger pass = facade.getPassengerById(1);
+        assertEquals(1, pass.getId());
     }
-    
 
 }

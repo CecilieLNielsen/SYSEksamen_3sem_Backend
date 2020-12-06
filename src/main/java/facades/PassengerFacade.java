@@ -58,8 +58,8 @@ public class PassengerFacade {
     public Passenger getPassengerById(int id) {
         EntityManager em = emf.createEntityManager();
         try {
-            TypedQuery<Passenger> query = em.createQuery("SELECT p FROM Passenger p WHERE :id = :id", Passenger.class).setParameter("id", id);
-            return query.getSingleResult();
+            Passenger pass = em.find(Passenger.class, id);
+            return pass;
         } finally {
             em.close();
 

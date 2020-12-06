@@ -79,8 +79,8 @@ public class FlightFacade {
     public Flight getFlightEntityById(int id) {
         EntityManager em = emf.createEntityManager();
         try {
-            TypedQuery<Flight> query = em.createQuery("SELECT f FROM Flight f WHERE :id = :id", Flight.class).setParameter("id", id);
-            return query.getSingleResult();
+            Flight f = em.find(Flight.class, id);
+            return f;
         } finally {
             em.close();
         }
