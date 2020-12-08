@@ -52,17 +52,8 @@ public class FlightResource {
     //returns all flights in database. 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public String getJson() {
+    public String getFlights() {
        return GSON.toJson(facade.getAllFligths());
-    }
-
-    /**
-     * PUT method for updating or creating an instance of FlightResource
-     * @param content representation for the resource
-     */
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void putJson(String content) {
     }
     
     @GET
