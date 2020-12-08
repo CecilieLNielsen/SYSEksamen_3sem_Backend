@@ -23,14 +23,6 @@ entities/Booking.class
 utils/SetupTestUsers.class
 security/errorhandling/AuthenticationException.class
 cors/CorsFilter.class
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-DTO/MakeBookingDTO.class
-=======
->>>>>>> 6d4b3e86c2c521f31ffecd84269c765cb68da9e8
-security/LoginEndpoint.class
->>>>>>> 239b86a9e0e5bce61e97204792af1bb6d653fc84
 DTO/MakeBookingDTO.class
 security/LoginEndpoint.class
 security/errorhandling/NotAuthorizedExceptionMapper.class
@@ -39,6 +31,7 @@ facades/FlightFacade.class
 utils/HttpUtils.class
 facades/UserFacade.class
 entities/Airport.class
+DTO/BookingDTO.class
 errorhandling/NotFoundException.class
 entities/User.class
 rest/FlightResource.class

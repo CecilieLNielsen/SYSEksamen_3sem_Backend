@@ -5,6 +5,7 @@
  */
 package facades;
 
+import DTO.BookingDTO;
 import DTO.FlightDTO;
 import DTO.MakeBookingDTO;
 import entities.Booking;
@@ -68,18 +69,19 @@ public class BookingFacade {
 //            em.close();
 //        }
 //
-//    }
+//   }
 
-    public Booking makeBooking(MakeBookingDTO bookingDTO) {
+    public BookingDTO makeBooking(MakeBookingDTO makeBookingDTO) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            Flight flight = ff.getFlightEntityById(bookingDTO.getFlightId());
-            Passenger passenger = pf.getPassengerById(bookingDTO.getUserId());
+            Flight flight = ff.getFlightEntityById(makeBookingDTO.getFlightId());
+            Passenger passenger = pf.getPassengerById(makeBookingDTO.getUserId());
             Booking booking = new Booking(flight, passenger);
             em.persist(booking);
             em.getTransaction().commit();
-            return booking;
+            System.out.println(booking.toString());
+            return new BookingDTO(booking);
         } finally {
             em.close();
         }

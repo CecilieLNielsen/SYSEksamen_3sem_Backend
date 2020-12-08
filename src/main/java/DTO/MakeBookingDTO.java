@@ -12,13 +12,16 @@ package DTO;
 public class MakeBookingDTO {
 
     private final int flightId;
-    private final int userId;
-  
-
+    private final int userId;   
+    
     public MakeBookingDTO(int flightId, int userId) {
         this.flightId = flightId;
-        this.userId = userId;
-        
+        this.userId = userId;   
+    }
+
+    @Override
+    public String toString() {
+        return "MakeBookingDTO{" + "flightId=" + flightId + ", userId=" + userId + '}';
     }
 
     public int getFlightId() {
