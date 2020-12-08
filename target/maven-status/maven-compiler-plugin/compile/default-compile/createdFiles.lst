@@ -15,6 +15,7 @@ entities/Role.class
 security/JWTAuthenticationFilter.class
 rest/ApplicationConfig.class
 security/RolesAllowedFilter.class
+DTO/FilterDTO.class
 errorhandling/ExceptionDTO.class
 utils/SetupTestData.class
 DTO/FlightDTO.class
@@ -22,6 +23,14 @@ entities/Booking.class
 utils/SetupTestUsers.class
 security/errorhandling/AuthenticationException.class
 cors/CorsFilter.class
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+DTO/MakeBookingDTO.class
+=======
+>>>>>>> 6d4b3e86c2c521f31ffecd84269c765cb68da9e8
+security/LoginEndpoint.class
+>>>>>>> 239b86a9e0e5bce61e97204792af1bb6d653fc84
 DTO/MakeBookingDTO.class
 security/LoginEndpoint.class
 security/errorhandling/NotAuthorizedExceptionMapper.class

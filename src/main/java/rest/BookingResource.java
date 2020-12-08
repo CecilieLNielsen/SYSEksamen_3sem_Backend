@@ -70,6 +70,7 @@ public class BookingResource {
     public String makeBooking(String booking) {
         MakeBookingDTO bookingDTO = GSON.fromJson(booking, MakeBookingDTO.class);
         facade.makeBooking(bookingDTO);
+        
         return "{\"msg\":\"Your booking has been placed!\"}";
     }
 

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 /Users/abed/Desktop/handins/eksamen/SYSEksamen_3sem_Backend/src/test/java/facades/FacadeExampleTest.java
 /Users/abed/Desktop/handins/eksamen/SYSEksamen_3sem_Backend/src/test/java/rest/FlightEndPointTest.java
 /Users/abed/Desktop/handins/eksamen/SYSEksamen_3sem_Backend/src/test/java/facades/PassengerFacadeTest.java
 /Users/abed/Desktop/handins/eksamen/SYSEksamen_3sem_Backend/src/test/java/facades/FlightFacadeTest.java
 /Users/abed/Desktop/handins/eksamen/SYSEksamen_3sem_Backend/src/test/java/rest/LoginEndpointTest.java
 /Users/abed/Desktop/handins/eksamen/SYSEksamen_3sem_Backend/src/test/java/facades/BookingFacadeTest.java
+=======
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/test/java/facades/FacadeExampleTest.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/test/java/facades/FlightFacadeTest.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/test/java/rest/LoginEndpointTest.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/test/java/rest/FlightEndPointTest.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/test/java/facades/BookingFacadeTest.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/test/java/facades/PassengerFacadeTest.java
+>>>>>>> 239b86a9e0e5bce61e97204792af1bb6d653fc84

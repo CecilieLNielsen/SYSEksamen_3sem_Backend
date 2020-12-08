@@ -70,7 +70,7 @@ public class BookingFacade {
 //
 //    }
 
-    public void makeBooking(MakeBookingDTO bookingDTO) {
+    public Booking makeBooking(MakeBookingDTO bookingDTO) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
@@ -79,6 +79,7 @@ public class BookingFacade {
             Booking booking = new Booking(flight, passenger);
             em.persist(booking);
             em.getTransaction().commit();
+            return booking;
         } finally {
             em.close();
         }
