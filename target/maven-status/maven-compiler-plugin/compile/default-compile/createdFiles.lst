@@ -1,19 +1,19 @@
 entities/Country.class
-DTO/CountryDTO.class
 errorhandling/GenericExceptionMapper.class
+DTO/CountryDTO.class
 entities/Passenger.class
 utils/EMF_Creator.class
 security/SharedSecret.class
 rest/BookingResource.class
-security/UserPrincipal.class
 facades/PassengerFacade.class
+security/UserPrincipal.class
 security/errorhandling/AuthenticationExceptionMapper.class
 entities/Flight.class
 facades/BookingFacade.class
 DTO/AirportDTO.class
 entities/Role.class
-security/JWTAuthenticationFilter.class
 rest/ApplicationConfig.class
+security/JWTAuthenticationFilter.class
 security/RolesAllowedFilter.class
 DTO/FilterDTO.class
 errorhandling/ExceptionDTO.class
@@ -23,13 +23,17 @@ entities/Booking.class
 utils/SetupTestUsers.class
 security/errorhandling/AuthenticationException.class
 cors/CorsFilter.class
+<<<<<<< HEAD
 DTO/MakeBookingDTO.class
+=======
+>>>>>>> 6d4b3e86c2c521f31ffecd84269c765cb68da9e8
 security/LoginEndpoint.class
+DTO/MakeBookingDTO.class
+facades/FlightFacade.class
 security/errorhandling/NotAuthorizedExceptionMapper.class
 security/JWTSecurityContext.class
-facades/FlightFacade.class
-utils/HttpUtils.class
 facades/UserFacade.class
+utils/HttpUtils.class
 entities/Airport.class
 errorhandling/NotFoundException.class
 entities/User.class

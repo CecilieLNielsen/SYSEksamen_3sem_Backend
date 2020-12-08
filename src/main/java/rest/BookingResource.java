@@ -70,6 +70,15 @@ public class BookingResource {
     public String makeBooking(String booking) {
         MakeBookingDTO bookingDTO = GSON.fromJson(booking, MakeBookingDTO.class);
         facade.makeBooking(bookingDTO);
+        
         return "{\"msg\":\"Your booking has been placed!\"}";
     }
+
+    @GET
+    @Path("/id/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getFlightById(@PathParam("id") int id) {
+        return GSON.toJson(facade.getBooking(id));
+    }
+    
 }
