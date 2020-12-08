@@ -1,6 +1,5 @@
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/facades/PassengerFacade.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/entities/Airport.java
-/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/rest/DemoResource.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/rest/ApplicationConfig.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/rest/BookingResource.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/NotAuthorizedExceptionMapper.java
@@ -20,11 +19,13 @@
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/security/JWTAuthenticationFilter.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/utils/HttpUtils.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/security/UserPrincipal.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/DTO/FilterDTO.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/facades/UserFacade.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/security/errorhandling/AuthenticationException.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/errorhandling/NotFoundException.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/utils/EMF_Creator.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/entities/Booking.java
+/Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/utils/SetupTestData.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/DTO/CountryDTO.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/security/SharedSecret.java
 /Users/cecilie/NetBeansProjects/SYSEksamen_3sem_Backend/src/main/java/DTO/MakeBookingDTO.java

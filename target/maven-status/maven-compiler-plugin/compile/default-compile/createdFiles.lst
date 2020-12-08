@@ -15,13 +15,15 @@ entities/Role.class
 security/JWTAuthenticationFilter.class
 rest/ApplicationConfig.class
 security/RolesAllowedFilter.class
+DTO/FilterDTO.class
 errorhandling/ExceptionDTO.class
+utils/SetupTestData.class
 DTO/FlightDTO.class
 entities/Booking.class
 utils/SetupTestUsers.class
 security/errorhandling/AuthenticationException.class
 cors/CorsFilter.class
-rest/DemoResource.class
+DTO/MakeBookingDTO.class
 security/LoginEndpoint.class
 security/errorhandling/NotAuthorizedExceptionMapper.class
 security/JWTSecurityContext.class
