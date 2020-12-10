@@ -8,6 +8,7 @@ package rest;
 import DTO.MakeBookingDTO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import entities.Booking;
 import entities.Passenger;
 import facades.BookingFacade;
 import javax.persistence.EntityManagerFactory;
@@ -69,9 +70,9 @@ public class BookingResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String makeBooking(String booking) {
         MakeBookingDTO bookingDTO = GSON.fromJson(booking, MakeBookingDTO.class);
-        facade.makeBooking(bookingDTO);
-        
-        return "{\"msg\":\"Your booking has been placed!\"}";
+        System.out.println(bookingDTO.toString());
+        System.out.println(facade.makeBooking(bookingDTO).toString());
+        return GSON.toJson(facade.makeBooking(bookingDTO));
     }
 
     @GET

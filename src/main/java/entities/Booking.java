@@ -68,7 +68,8 @@ public class Booking implements Serializable {
         this.passengerInfo = passengerInfo;
     }
 
-    
-
-    
+    @Override
+    public String toString() {
+        return "Booking{" + "id=" + id + ", flight=" + flight + ", passengerInfo=" + passengerInfo + ", created=" + created + '}';
+    }
 }
